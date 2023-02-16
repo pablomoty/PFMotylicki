@@ -5,31 +5,364 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encontrá en Barriguetas Pet Shop los mejores productos y servicios para tus mascotas. ¡Compra alimentos, accesorios y más en nuestra tienda online!">
+    <!-- Meta description -->
+    <meta name="description"
+        content="Encontrá en Barriguetas Pet Shop los mejores productos y servicios para tus mascotas. ¡Compra alimentos, accesorios y más en nuestra tienda online!">
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://w7.pngwing.com/pngs/35/114/png-transparent-dog-cat-paw-decal-paw-print-animals-pet-paw-thumbnail.png"
+        type="image/x-icon">
     <title>Gatos | Barriguetas Pet Shop</title>
-    <!-- Bootstrap CSS -->
+    <!-- BootStrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- Mi CSS -->
+    <!-- BootStrap Iconos  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  Mi CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
-    <h1>Inicio</h1>
+
+    <header id="header">
+
+        <div class="headerWhatsapp">
+            <div class="d-flex justify-content-center">
+                <i class="bi bi-whatsapp" alt="logo whatsapp"></i>
+                <a class="ps-2 mb-0 fuenteAlternativa" href="https://web.whatsapp.com" target="_blank">Contactanos de
+                    9hs a 18hs
+                    11-1234-5678 </a>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg navColor">
+            <div class="container-fluid">
+                <h1 data-aos="fade-right"><a class="tituloNav" href="../index.html">Barriguetas Pet Shop</a></h1>
+                <button class="navbar-toggler botonNavColor" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li><a class="ms-4 botonNav botonNavChico" href="../index.html">INICIO</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="perros.html">PERROS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="gatos.html">GATOS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="servicios.html">SERVICIOS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="nosotros.html">NOSOTROS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="#footer">MAS INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <section>
+
+            <div class="divInicio1">
+                <h2 class="h2inicio1 text-center mt-3 fs-1">GATOS</h2>
+                <img class="imagenperro pattern" src="../img/gatos/fondogatos.jpg" alt="imagen de perro afuera">
+            </div>
+
+        </section>
+
+        <section class="promociones">
+
+            <div class="contenedorPromociones">
+                <i class="bi bi-clock iconos"></i>
+                <p class="iconosparrafo fuenteAlternativa text-center">Entregas Express en el dia</p>
+            </div>
+
+            <div class="contenedorPromociones">
+                <i class="bi bi-truck iconos text-center"></i>
+                <p class="iconosparrafo fuenteAlternativa">Envios gratis en CABA y GBA</p>
+            </div>
+
+            <div class="contenedorPromociones">
+                <i class="bi bi-credit-card-2-back iconos text-center"></i>
+                <p class="iconosparrafo fuenteAlternativa">Medios de pago y promociones</p>
+            </div>
+
+            <div class="contenedorPromociones">
+                <i class="bi bi-shop-window iconos text-center"></i>
+                <p class="iconosparrafo fuenteAlternativa">Retiro gratuito en sucursal</p>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class=" row d-flex justify-content-center container-fluid text-center">
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato1.webp" class="card-img-top opacidad"
+                            alt="Bolsa de alimento para gatos pequeños Old Prince Equilibrium">
+                        <div class="card-body">
+                            <p class="card-title">Old Prince Equilibrium Kitten</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$7.370</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato2.webp" class="card-img-top opacidad"
+                            alt="Bolsa de alimento para gato adulto Old Prince Cats Indoor">
+                        <div class="card-body">
+                            <p class="card-title">Old Prince Cats Indoor</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$7.370</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato3.webp" class="card-img-top opacidad"
+                            alt="Bolsa de alimento para gatos adultos Vitalcan Balanced">
+                        <div class="card-body">
+                            <p class="card-title">Vitalcan Balanced Gato Adulto</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$14.579</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato4.webp" class="card-img-top opacidad"
+                            alt="Lata de alimentos Agility sabor natural">
+                        <div class="card-body">
+                            <p class="card-title">Agility Cats En Lata</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$415</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato5.webp" class="card-img-top opacidad"
+                            alt="Bolsa de alimento para gatos adultos Cat Selection">
+                        <div class="card-body">
+                            <p class="card-title">Cat Selection Gato Adulto</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$4.971</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/alimentogato6.webp" class="card-img-top opacidad"
+                            alt="Bolsa de alimentos para gatos castrados Purina Excellent">
+                        <div class="card-body">
+                            <p class="card-title">Excellent Gato Castrado</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$17.054</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class=" row d-flex justify-content-center container-fluid text-center">
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato1.webp" class="card-img-top opacidad"
+                            alt="Rascador de dos pisos en color negro y beige ">
+                        <div class="card-body">
+                            <p class="card-title">Rascador Para Gatos 2 Pisos</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$36.555</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato2.webp" class="card-img-top opacidad"
+                            alt="Tunel triple para gatos en color rojo, amarillo y verde">
+                        <div class="card-body">
+                            <p class="card-title">Tunel Gato Triple</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$10.957</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato3.webp" class="card-img-top opacidad"
+                            alt="Puerta vaiven para gato con su caja de presentacion">
+                        <div class="card-body">
+                            <p class="card-title">Puerta Vaiven Para Gato</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$8.797</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato4.webp" class="card-img-top opacidad"
+                            alt="Collares para gato en color negro, azul, naranja y rojo">
+                        <div class="card-body">
+                            <p class="card-title">Collar Para Gato Elastico Nylon</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$728</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato5.webp" class="card-img-top opacidad"
+                            alt="Arnes con correa de color azul">
+                        <div class="card-body">
+                            <p class="card-title">Arnes Con Correa</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$ 1.972</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/accesoriosgato6.webp" class="card-img-top opacidad"
+                            alt="Cucha de interior color rosa con un gato dentro">
+                        <div class="card-body">
+                            <p class="card-title">Cucha De Interior/Moises</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$15.619</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class=" row d-flex justify-content-center container-fluid text-center">
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato1.webp" class="card-img-top opacidad"
+                            alt="Caja Pipeta Advocate para gato">
+                        <div class="card-body">
+                            <p class="card-title">Pipeta Advocate Para Gato</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$2.473</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato2.webp" class="card-img-top opacidad"
+                            alt="Envase pipeta Frontline Plus">
+                        <div class="card-body">
+                            <p class="card-title">Pipeta Frontline Plus Gato</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$1.164</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato3.webp" class="card-img-top opacidad"
+                            alt="Caja Pulguicida Power Met para gatos">
+                        <div class="card-body">
+                            <p class="card-title">Pulguicida Power Met Gatos</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$725</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato4.webp" class="card-img-top opacidad"
+                            alt="Bolsa de arena aglomerante Sanicat">
+                        <div class="card-body">
+                            <p class="card-title">Sanicat Clumping</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$2.115</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato5.webp" class="card-img-top opacidad"
+                            alt="Cepillo doble cabezal para gatos en color negro y rojo">
+                        <div class="card-body">
+                            <p class="card-title">Cepillo Gigwi Dual Head</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$9.709</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-2">
+                    <div class="card h-100">
+                        <img src="../img/gatos/saludgato6.webp" class="card-img-top opacidad"
+                            alt="Litera cerrada plastica de color blanco y azul ">
+                        <div class="card-body">
+                            <p class="card-title">Litera Plastica Cerrada</p>
+                            <p class="card-text text-dark fs-4 fuenteAlternativa">$18.216</p>
+                            <a href="#" class="btn btn-success w-100">Comprar</a>
+                        </div>
+                    </div>
+                </article>
 
 
+            </div>
+
+        </section>
+
+    </main>
 
 
+    <footer id="footer">
+
+        <ul>
+            <li><a class="botonFooter" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li><a class="botonFooter" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+            <li><a class="botonFooter" href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+            <li><a class="botonFooter" href="#header">VOLVER ARRIBA</a></li>
+        </ul>
+
+        <p class="textoFooter">Sitio Web creado por Pablo Motylicki</p>
+        <p class="textoFooter">2023 Todos los derechos reservados</p>
+
+    </footer>
 
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        AOS.init();
+    </script>
 
-
-
-
-
-
-    <!-- Bootstrap JS -->
+    <!-- BootStrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
