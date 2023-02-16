@@ -4,11 +4,13 @@ footer {
 	background-color: $principal;
 	text-align: center;
 	padding-bottom: 10px;
+
 	ul {
 		li {
 			display: inline-block;
 			margin: 20px;
 			list-style-type: none;
+
 			a {
 				text-decoration: none;
 				color: $blanco;
@@ -17,13 +19,16 @@ footer {
 		}
 	}
 }
+
 .textoFooter {
 	color: $secundario;
 }
+
 .botonFooter {
 	background-color: $principal;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
+
 	&:hover {
 		background-color: $hover;
 		transition: all 0.5s;
