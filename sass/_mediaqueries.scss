@@ -1,6 +1,6 @@
+/* MEDIA QUERIES */
 
-$hover: #1a8863;
-$background-color_2: #187053;
+/*BARRA DE NAVEGACION*/
 
 @media (max-width: 991px) {
 	.botonNavChico {
@@ -24,7 +24,7 @@ $background-color_2: #187053;
 
 @media (min-width: 992px) {
 	.botonNav {
-		background-color: $background-color_2;
+		background-color: $principal;
 		padding: 0.5rem;
 		border-radius: 0.5rem;
 		&:hover {
