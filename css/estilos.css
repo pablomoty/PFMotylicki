@@ -21,21 +21,66 @@ body {
   background-color: #25d366;
 }
 .headerWhatsapp i {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
 p {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
+}
+
+/*BARRA DE NAVEGACION*/
+.navColor {
+  background-color: #187053;
+}
+
+.botonNavColor {
+  background-color: #ffffff;
+}
+
+.tituloNav {
+  color: #ffffff;
+  font-size: 2.3rem;
+}
+
+nav li a {
+  color: #e6b350;
+}
+
+@media (max-width: 991px) {
+  .botonNavChico {
+    display: block;
+    text-align: center;
+    padding: 0.4rem;
+    border-bottom: #ffffff 2px solid;
+  }
+  .botonNavChico:hover {
+    background-color: #1a8863;
+    transition: all 0.5s;
+  }
+  nav li a {
+    color: #ffffff;
+  }
+}
+@media (min-width: 992px) {
+  .botonNav {
+    background-color: #187053;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .botonNav:hover {
+    background-color: #1a8863;
+    transition: all 0.5s;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

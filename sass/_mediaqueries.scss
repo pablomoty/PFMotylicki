@@ -1,0 +1,35 @@
+
+$hover: #1a8863;
+$background-color_2: #187053;
+
+@media (max-width: 991px) {
+	.botonNavChico {
+		display: block;
+		text-align: center;
+		padding: 0.4rem;
+		border-bottom: #ffffff 2px solid;
+		&:hover {
+			background-color: $hover;
+			transition: all 0.5s;
+		}
+	}
+	nav {
+		li {
+			a {
+				color: $blanco;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.botonNav {
+		background-color: $background-color_2;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		&:hover {
+			background-color: $hover;
+			transition: all 0.5s;
+		}
+	}
+}
