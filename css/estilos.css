@@ -1,3 +1,41 @@
+/*FUENTES*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Catamaran&family=Varela+Round&display=swap");
+/*BASE*/
+body {
+  font-size: 62.5%;
+  font-family: "Bubblegum Sans", cursive;
+  background-color: #e8e9e8;
+}
 
+.fuenteAlternativa {
+  font-family: "Catamaran", sans-serif;
+}
+
+.body2 {
+  background-color: #ffffff;
+}
+
+/*WHATSAPP*/
+.headerWhatsapp {
+  background-color: #25d366;
+}
+.headerWhatsapp i {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=estilos.css.map */
