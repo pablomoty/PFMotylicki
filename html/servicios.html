@@ -5,33 +5,174 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encontrá en Barriguetas Pet Shop los mejores productos y servicios para tus mascotas. ¡Compra alimentos, accesorios y más en nuestra tienda online!">
+    <!-- Meta description -->
+    <meta name="description"
+        content="Encontrá en Barriguetas Pet Shop los mejores productos y servicios para tus mascotas. ¡Compra alimentos, accesorios y más en nuestra tienda online!">
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://w7.pngwing.com/pngs/35/114/png-transparent-dog-cat-paw-decal-paw-print-animals-pet-paw-thumbnail.png"
+        type="image/x-icon">
     <title>Nuestros Servicios | Barriguetas Pet Shop</title>
-    <!-- Bootstrap CSS -->
+    <!-- BootStrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- Mi CSS -->
+    <!-- BootStrap Iconos  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  Mi CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
-    <h1>Inicio</h1>
+
+    <header id="header">
+
+        <div class="headerWhatsapp">
+            <div class="d-flex justify-content-center">
+                <i class="bi bi-whatsapp" alt="logo whatsapp"></i>
+                <a class="ps-2 mb-0 fuenteAlternativa" href="https://web.whatsapp.com" target="_blank">Contactanos de
+                    9hs a 18hs
+                    11-1234-5678 </a>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg navColor">
+            <div class="container-fluid">
+                <h1 data-aos="fade-right"><a class="tituloNav" href="../index.html">Barriguetas Pet Shop</a></h1>
+                <button class="navbar-toggler botonNavColor" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li><a class="ms-4 botonNav botonNavChico" href="../index.html">INICIO</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="perros.html">PERROS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="gatos.html">GATOS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="servicios.html">SERVICIOS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="nosotros.html">NOSOTROS</a></li>
+                        <li><a class="ms-4 botonNav botonNavChico" href="#footer">MAS INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="divInicio1">
+            <h2 class="h2inicio1 text-center mt-3">NUESTROS SERVICIOS</h2>
+        </div>
+
+        <section class="container-fluid">
+
+            <div class="seccion container-fluid">
+
+                <div class="row align-items-center">
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <img class="img-fluid imagenServicios" src="../img/servicios/peluqueria.jpg"
+                            alt="Imagen de mujer recortando el pelo a un perro">
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+
+                        <h3 class="text-center pt-2">Peluqueria Canina</h3>
+                        <p class=" text-dark text-justify pt-2">El cuidado del pelo de tu mascota es esencial para
+                            mantenerla linda y saludable. En nuestros establecimientos ofrecemos baños, cortes y
+                            peinados que combinan
+                            estos dos aspectos fundamentales para el bienestar de tu mascota.
+                            El servicio incluye baño con shampoo natural, secado, corte a máquina y/o tijera, peinado,
+                            limpieza de oídos y corte de uñas.
+                            Siempre priorizamos el bienestar de tu mascota, por eso te invitamos a que hables con
+                            nuestro
+                            profesional de peluquería, para que le menciones tus dudas o consejos sobre los cuidados de
+                            tu compañero.
+                        </p>
+                        <button type="button"
+                            class="btn btn-success btn-lg col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">RESERVAR
+                            TURNO</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="container-fluid mb-3">
+
+            <div class="seccion container-fluid">
+
+                <div class="row align-items-center flex-lg-row-reverse flex-xl-row-reverse">
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <img class="img-fluid imagenServicios" src="../img/servicios/veterinaria.webp"
+                            alt="Imagen de medica veterinaria con un gato en brazo">
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+
+                        <h3 class="text-center pt-2">Veterinaria</h3>
+                        <p class=" text-dark text-justify pt-2">
+                            Nuestros consultorios le ofrecen un servicio médico veterinario integral para pequeños
+                            animales. Cuenta para ello
+                            con un amplio y cómodo establecimiento, sala de espera grande, amplios consultorios,
+                            quirófano totalmente equipado, sala de internación y cuidados intensivos, cálida área de
+                            accesorios para sus mascotas y farmacia veterinaria, y fundamentalmente un cuerpo médico,
+                            personal asistente y administrativo altamente calificado para la mejor atención y cuidado de
+                            sus mascotas, y la tranquilidad de su familia.
+
+                        </p>
+                        <button type="button"
+                            class="btn btn-success btn-lg col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3 float-end">RESERVAR
+                            TURNO</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+        <ul>
+            <li><a class="botonFooter" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li><a class="botonFooter" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+            <li><a class="botonFooter" href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+            <li><a class="botonFooter" href="#header">VOLVER ARRIBA</a></li>
+        </ul>
+
+        <p class="textoFooter">Sitio Web creado por Pablo Motylicki</p>
+        <p class="textoFooter">2023 Todos los derechos reservados</p>
+
+    </footer>
 
 
 
 
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
 
-
-
-
-
-
-    <!-- Bootstrap JS -->
+    <!-- BootStrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
