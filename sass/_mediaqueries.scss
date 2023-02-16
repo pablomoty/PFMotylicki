@@ -33,3 +33,34 @@
 		}
 	}
 }
+
+/*GATOS.HTML -- PERROS-HTML */
+
+
+@media (max-width: 915px) {
+	.iconosparrafo {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 692px) {
+	.iconos {
+		padding-right: 0;
+	}
+	.contenedorPromociones {
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media (max-width: 510px) {
+	.promociones {
+		display: block;
+	}
+	.contenedorPromociones {
+		display: flex;
+		flex-direction: row;
+		border-bottom: #747373 0.1rem solid;
+	}
+	.iconos {
+		padding-right: 1rem;
+	}
+}

@@ -56,6 +56,7 @@ nav li a {
   color: #e6b350;
 }
 
+/*INICIO.HTML*/
 .divInicio1 {
   background-color: #187053;
 }
@@ -84,6 +85,7 @@ nav li a {
   opacity: 70%;
 }
 
+/* FOOTER */
 footer {
   background-color: #187053;
   text-align: center;
@@ -114,6 +116,93 @@ footer ul li a {
   transition: all 0.5s;
 }
 
+/* SERVICIOS.HTML*/
+.seccion {
+  background-color: #ffffff;
+  margin-top: 1rem;
+  border: 0.1rem black solid;
+}
+
+.imagenServicios {
+  padding: 1rem;
+}
+
+/* GATOS.HTML -- PERROS.HTML */
+.h2main {
+  text-align: center;
+  font-size: 50px;
+  margin: 10px 0 10px 0;
+}
+
+.main {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.parrafo {
+  color: #000000;
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+}
+
+.imagenesmain {
+  margin: 0, auto;
+  width: auto;
+  height: auto;
+}
+
+.pattern {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.promociones {
+  background-color: #ffffff;
+  border: #187053 2px solid;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.contenedorPromociones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem 0 0;
+}
+
+.iconos {
+  font-size: 2rem;
+  color: #000000;
+  padding-right: 1rem;
+}
+
+.iconosparrafo {
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 0;
+}
+
+/*NOSOTROS.HTML*/
+.form {
+  display: inline-block;
+  border: #000000 0.1rem solid;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.margenes {
+  border: #000000 0.1rem solid;
+  background-color: #ffffff;
+}
+
+.margenesIframe {
+  padding: 1rem;
+}
+
 /* MEDIA QUERIES */
 /*BARRA DE NAVEGACION*/
 @media (max-width: 991px) {
@@ -140,6 +229,34 @@ footer ul li a {
   .botonNav:hover {
     background-color: #1a8863;
     transition: all 0.5s;
+  }
+}
+/*GATOS.HTML -- PERROS-HTML */
+@media (max-width: 915px) {
+  .iconosparrafo {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 692px) {
+  .iconos {
+    padding-right: 0;
+  }
+  .contenedorPromociones {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 510px) {
+  .promociones {
+    display: block;
+  }
+  .contenedorPromociones {
+    display: flex;
+    flex-direction: row;
+    border-bottom: #747373 0.1rem solid;
+  }
+  .iconos {
+    padding-right: 1rem;
   }
 }
 
