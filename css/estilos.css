@@ -1,7 +1,6 @@
 /*FUENTES*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Catamaran&family=Varela+Round&display=swap");
-
 /*BASE*/
 body {
   font-size: 62.5%;
@@ -17,11 +16,10 @@ body {
   background-color: #ffffff;
 }
 
-/*WHATSAPP*/
+/* MIXIN */ /*WHATSAPP*/
 .headerWhatsapp {
   background-color: #25d366;
 }
-
 .headerWhatsapp i {
   color: #ffffff;
   font-size: 1.2rem;
@@ -55,7 +53,9 @@ p {
 }
 
 nav li a {
-  color: #e6b350;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 /*INICIO.HTML*/
@@ -93,13 +93,11 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-
 footer ul li {
   display: inline-block;
   margin: 20px;
   list-style-type: none;
 }
-
 footer ul li a {
   text-decoration: none;
   color: #ffffff;
@@ -115,7 +113,6 @@ footer ul li a {
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-
 .botonFooter:hover {
   background-color: #1a8863;
   transition: all 0.5s;
@@ -217,69 +214,57 @@ footer ul li a {
     padding: 0.4rem;
     border-bottom: #ffffff 2px solid;
   }
-
   .botonNavChico:hover {
     background-color: #1a8863;
     transition: all 0.5s;
   }
-
   nav li a {
     color: #ffffff;
   }
 }
-
 @media (min-width: 992px) {
   .botonNav {
     background-color: #187053;
     padding: 0.5rem;
     border-radius: 0.5rem;
   }
-
   .botonNav:hover {
     background-color: #1a8863;
     transition: all 0.5s;
   }
 }
-
 @media (max-width: 390px) {
   .tituloNav {
     font-size: 1.9rem;
   }
-
   .headerWhatsapp a {
     font-size: 1rem;
   }
 }
-
 /*GATOS.HTML -- PERROS-HTML */
 @media (max-width: 915px) {
   .iconosparrafo {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 692px) {
   .iconos {
     padding-right: 0;
   }
-
   .contenedorPromociones {
     display: flex;
     flex-direction: column;
   }
 }
-
 @media (max-width: 510px) {
   .promociones {
     display: block;
   }
-
   .contenedorPromociones {
     display: flex;
     flex-direction: row;
     border-bottom: #747373 0.1rem solid;
   }
-
   .iconos {
     padding-right: 1rem;
   }
