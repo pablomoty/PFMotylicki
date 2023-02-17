@@ -16,7 +16,7 @@ body {
   background-color: #ffffff;
 }
 
-/* MIXIN */ /*WHATSAPP*/
+/*WHATSAPP*/
 .headerWhatsapp {
   background-color: #25d366;
 }
@@ -55,7 +55,7 @@ p {
 nav li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /*INICIO.HTML*/
@@ -101,7 +101,7 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .textoFooter {
