@@ -1,0 +1,21 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer opened="" #drawer class="example-sidenav" mode="side">
+
+     <app-menunavegacion></app-menunavegacion>
+     
+    </mat-drawer>
+
+  
+    
+    <div class="example-sidenav-content">
+  
+      <app-toolbar [drawer]="drawer"></app-toolbar>
+
+        
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      
+    </div>
+  
+  </mat-drawer-container>

@@ -1,0 +1,3 @@
+<button mat-raised-button (click)="abrirFormulario()">Agregar Alumno</button>
+
+<app-tabla [dataSource]="(users | async) || []" (borrarAlumnos)="borrarAlumno($event)" (editarAlumnos)="editarAlumno($event)"></app-tabla>

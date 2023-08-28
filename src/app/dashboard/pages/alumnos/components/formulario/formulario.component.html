@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>{{editingUser? "Editando a " + editingUser.nombre + " " + editingUser.apellido: "Creando Alumno"}} </h1>
+        
+<form [formGroup]="alumnoForm">
+<div mat-dialog-content class="contenedor">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" name="Nombre" formControlName="nombre">
+
+            <mat-error *ngFor="let error of nombreControl.errors | keyvalue">
+                {{ error | mensajeError }}
+              </mat-error>
+            
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" name="Apellido"formControlName="apellido">
+
+            <mat-error *ngFor="let error of apellidoControl.errors | keyvalue">
+                {{ error | mensajeError }}
+              </mat-error>
+
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+        
+    </div>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Inscripto a:</mat-label>
+        <mat-select formControlName="curso">
+            <mat-option *ngFor="let curso of cursos" [value]="curso">
+                {{curso}}
+            </mat-option>
+            <mat-error *ngFor="let error of cursoControl.errors | keyvalue">
+                {{ error | mensajeError }}
+              </mat-error>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Genero" formControlName="genero">
+        <mat-radio-button value="Masculino">Masculino</mat-radio-button>
+        <mat-radio-button value="Femenino">Femenino</mat-radio-button>
+
+    </mat-radio-group>
+
+
+
+</div>
+<div class="botones" mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close="">Cancelar</button>
+    <button mat-raised-button (click)="guardarAlumno()" type="submit" color="primary">Guardar</button>
+</div>
+</form>

@@ -1,0 +1,20 @@
+{
+  "alumnos": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "email": "juanperez@gmail.com",
+      "curso": "JavaScript",
+      "genero": "Masculino"
+    },
+    {
+      "nombre": "Jose",
+      "apellido": "Alvarez",
+      "email": "josealvarez@gmail.com",
+      "curso": "JavaScript",
+      "genero": "Masculino",
+      "id": "2"
+    }
+  ]
+}
