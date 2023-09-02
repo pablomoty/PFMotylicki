@@ -9,12 +9,13 @@
       "genero": "Masculino"
     },
     {
+      "id": "2",
       "nombre": "Jose",
       "apellido": "Alvarez",
       "email": "josealvarez@gmail.com",
       "curso": "JavaScript",
-      "genero": "Masculino",
-      "id": "2"
+      "genero": "Masculino"
+      
     }
   ]
 }
