@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, map, take } from "rxjs";
 import { Alumno } from "../dashboard/pages/alumnos/models/modelalumno";
 import { NotifierService } from "../core/services/notifier.service";
 import { Router } from "@angular/router";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { Store } from "@ngrx/store";
 import { AuthActions } from "../store/auth/auth.actions";
@@ -44,13 +44,12 @@ export class AuthService {
       next: (response) => {
         if (response.length) {
           const authUser = response[0];
-          /* this._authUser$.next(response[0]); */
           this.store.dispatch(AuthActions.setAuthUser({ data: authUser }));
           this.router.navigate(['/dashboard']);
         } else {
           
           this.notifier.showError('Email o contrasena invalida');
-          this._authUser$.next(null);
+          this.store.dispatch(AuthActions.setAuthUser({ data: null }));
         }
       },
     })

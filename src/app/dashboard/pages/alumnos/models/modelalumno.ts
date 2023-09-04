@@ -5,6 +5,7 @@ export interface Alumno {
     email: string
     curso: string
     genero: string
+    rol: "ADMIN" | "USUARIO"
   
   }
 

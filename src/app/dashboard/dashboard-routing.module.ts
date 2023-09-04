@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { AlumnosComponent } from './pages/alumnos/alumnos.component';
+import { CursosComponent } from './pages/cursos/cursos.component';
 
 
 
@@ -13,7 +15,12 @@ import { HomeComponent } from './pages/home/home.component';
       },
       {
         path: 'alumnos',
-        loadChildren: () => import('./pages/alumnos/alumnos.module').then((m) => m.AlumnosModule),
+        component: AlumnosComponent
+      },
+      {
+        path: 'cursos',
+        component: CursosComponent,
+        loadChildren: () => import('./pages/cursos/cursos.module').then((m) => m.CursosModule),
       },
       {
         path: '**',

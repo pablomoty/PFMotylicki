@@ -6,6 +6,7 @@
       "apellido": "Perez",
       "email": "juanperez@gmail.com",
       "curso": "JavaScript",
+      "rol": "ADMIN",
       "genero": "Masculino"
     },
     {
@@ -14,6 +15,7 @@
       "apellido": "Alvarez",
       "email": "josealvarez@gmail.com",
       "curso": "JavaScript",
+      "rol": "USUARIO",
       "genero": "Masculino"
       
     }

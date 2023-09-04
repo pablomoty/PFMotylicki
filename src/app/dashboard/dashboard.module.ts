@@ -7,9 +7,11 @@ import { SharedModule } from '../shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { AlumnosModule } from './pages/alumnos/alumnos.module';
+import { HomeModule } from './pages/home/home.module';
 import { MatListModule } from '@angular/material/list'
 import { RouterModule } from '@angular/router';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { CursosModule } from './pages/cursos/cursos.module';
 
 
 
@@ -28,9 +30,11 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     MatSidenavModule,
     MatToolbarModule,
     AlumnosModule,
+    HomeModule,
     MatListModule,
     RouterModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    CursosModule
     
     
 
