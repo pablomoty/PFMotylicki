@@ -1,11 +1,11 @@
 import { createActionGroup, props } from "@ngrx/store";
-import { Alumno } from "src/app/dashboard/pages/alumnos/models/modelalumno";
+import { Usuario } from "src/app/dashboard/pages/usuarios/models/modelusuario";
 
 
 export const AuthActions = createActionGroup({
   source: 'Auth',
   events: {
     
-    'setAuthUser': props<{ data: Alumno | null }>()
+    'setAuthUser': props<{ data: Usuario | null }>()
   }
 })

@@ -1,5 +1,5 @@
-export interface LogueoAlumno {
+export interface LogueoUsuario {
   
   email: string | null;
-  apellido: string | null;
+  password: string | null;
 }

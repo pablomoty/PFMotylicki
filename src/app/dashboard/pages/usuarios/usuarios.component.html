@@ -1,0 +1,4 @@
+<button mat-raised-button (click)="abrirFormulario()">Agregar Usuario</button>
+
+<app-tabla [dataSource]="(users | async) || []" (borrarUsuarios)="borrarUsuario($event)" (editarUsuarios)="editarUsuario($event)"></app-tabla>
+

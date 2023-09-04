@@ -1,23 +1,22 @@
 {
-  "alumnos": [
+  "usuarios": [
     {
-      "id": "1",
       "nombre": "Juan",
       "apellido": "Perez",
-      "email": "juanperez@gmail.com",
-      "curso": "JavaScript",
+      "email": "jp@gmail.com",
+      "password": "123456",
       "rol": "ADMIN",
-      "genero": "Masculino"
+      "genero": "Masculino",
+      "id": "1"
     },
     {
-      "id": "2",
       "nombre": "Jose",
       "apellido": "Alvarez",
-      "email": "josealvarez@gmail.com",
-      "curso": "JavaScript",
-      "rol": "USUARIO",
-      "genero": "Masculino"
-      
+      "email": "ja@gmail.com",
+      "password": "123456",
+      "rol": "Usuario",
+      "genero": "Masculino",
+      "id": "2"
     }
   ]
 }

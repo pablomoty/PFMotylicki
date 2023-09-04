@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CrearAlumnoData, UpdateAlumnoData, Alumno } from './models/modelalumno';
+import { CrearUsuarioData, UpdateUsuarioData, Usuario } from './models/modelusuario';
 import { BehaviorSubject, Observable, map, mergeMap, take } from 'rxjs';
 import { NotifierService } from 'src/app/core/services/notifier.service';
 import { HttpClient } from '@angular/common/http';
@@ -7,16 +7,16 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AlumnosService {
+export class UsuariosService {
 
-  private _users$ = new BehaviorSubject<Alumno[]>([]);
+  private _users$ = new BehaviorSubject<Usuario[]>([]);
   private users$ = this._users$.asObservable();
 
   constructor(private notifier: NotifierService, private httpClient: HttpClient) {}
 
   loadUsers(): void {
    
-    this.httpClient.get<Alumno[]>('http://localhost:3000/alumnos', {}).subscribe({
+    this.httpClient.get<Usuario[]>('http://localhost:3000/usuarios', {}).subscribe({
 
       next: (response) => {
 
@@ -29,7 +29,7 @@ export class AlumnosService {
     })
   }
 
-  getUsers(): Observable<Alumno[]> {
+  getUsers(): Observable<Usuario[]> {
     return this.users$;
   }
 
@@ -40,10 +40,10 @@ export class AlumnosService {
     )
   }
 
-  createUser(alumno: CrearAlumnoData): void {
+  createUser(usuario: CrearUsuarioData): void {
 
 
-    this.httpClient.post<Alumno>('http://localhost:3000/alumnos', alumno)
+    this.httpClient.post<Usuario>('http://localhost:3000/usuarios', usuario)
       .pipe(
         mergeMap((userCreate) => this.users$.pipe(
           take(1),
@@ -60,9 +60,9 @@ export class AlumnosService {
  
   }
 
-  updateUserById(id: number, alumnoActualizado: UpdateAlumnoData): void {
+  updateUserById(id: number, usuarioActualizado: UpdateUsuarioData): void {
 
-    this.httpClient.put('http://localhost:3000/alumnos/' + id, alumnoActualizado).subscribe({
+    this.httpClient.put('http://localhost:3000/usuarios/' + id, usuarioActualizado).subscribe({
 
       next: () => this.loadUsers(),
     })
@@ -70,7 +70,7 @@ export class AlumnosService {
 
 
   deleteUserById(id: number): void {
-    this.httpClient.delete('http://localhost:3000/alumnos/' + id) .pipe().subscribe({
+    this.httpClient.delete('http://localhost:3000/usuarios/' + id) .pipe().subscribe({
          
           next: () => this.loadUsers(),
     })

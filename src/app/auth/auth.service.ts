@@ -1,31 +1,31 @@
 import { Injectable } from "@angular/core";
-import { LogueoAlumno } from "./models";
+import { LogueoUsuario } from "./models";
 import { BehaviorSubject, Observable, map, take } from "rxjs";
-import { Alumno } from "../dashboard/pages/alumnos/models/modelalumno";
+import { Usuario } from "../dashboard/pages/usuarios/models/modelusuario";
 import { NotifierService } from "../core/services/notifier.service";
 import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { Store } from "@ngrx/store";
 import { AuthActions } from "../store/auth/auth.actions";
+import { selectAuthUser } from "../store/auth/auth.selector";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private _authUser$ = new BehaviorSubject<Alumno | null>(null);
-  public authUser$ = this._authUser$.asObservable();
+  public authUser$ = this.store.select(selectAuthUser);
 
   constructor(private notifier: NotifierService, private router: Router, private httpClient: HttpClient, private store:Store) {}
 
 
   autenticacion(): Observable<boolean> {
-    return this.httpClient.get<Alumno[]>(environment.baseApiUrl + '/alumnos', {
+    return this.httpClient.get<Usuario[]>(environment.baseApiUrl + '/usuarios', {
       params: {
-        token: localStorage.getItem('token') || '',
+       
       }
     }).pipe(
       map((usersResult) => {
         if (usersResult.length) {
-          const authUser = usersResult[0];
+          const authUser = usersResult[0]
           this.store.dispatch(AuthActions.setAuthUser({ data: authUser }));
         }
 
@@ -34,11 +34,11 @@ export class AuthService {
     )
   }
 
-  login(logueo: LogueoAlumno): void {
-    this.httpClient.get<Alumno[]>('http://localhost:3000/alumnos', {
+  login(logueo: LogueoUsuario): void {
+    this.httpClient.get<Usuario[]>(environment.baseApiUrl + '/usuarios', {
       params: {
         email: logueo.email || '',
-        password: logueo.apellido || '',
+        password: logueo.password || '', 
       }
     }).subscribe({
       next: (response) => {
@@ -54,5 +54,10 @@ export class AuthService {
       },
     })
    
+}
+
+public logout(): void {
+  this.store.dispatch(AuthActions.setAuthUser({ data: null }))
+  
 }
 }

@@ -1,30 +1,33 @@
-export interface Alumno {
+export interface Usuario {
     id: number;
     nombre: string
     apellido: string
     email: string
-    curso: string
+    password: string
+    rol: string
     genero: string
-    rol: "ADMIN" | "USUARIO"
+    
   
   }
 
-  export interface CrearAlumnoData {
+  export interface CrearUsuarioData {
     id: number;
     nombre: string
     apellido: string
     email: string
-    curso: string
+    password: string
+    rol: string
     genero: string
   
   }
 
-  export interface UpdateAlumnoData {
+  export interface UpdateUsuarioData {
     id: number;
     nombre: string
     apellido: string
     email: string
-    curso: string
+    password: string
+    rol: string
     genero: string
   
   }

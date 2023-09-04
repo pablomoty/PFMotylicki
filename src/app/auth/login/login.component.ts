@@ -9,12 +9,12 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  public emailControl = new FormControl('juanperez@gmail.com', [Validators.required, Validators.email]);
-  public apellidoControl = new FormControl('Perez', [Validators.required]);
+  public emailControl = new FormControl('', [Validators.required, Validators.email]);
+  public passwordControl = new FormControl('', [Validators.required]);
 
   public loginForm = new FormGroup({
     email: this.emailControl,
-    apellido: this.apellidoControl,
+    password: this.passwordControl,
   });
 
   constructor(private authService: AuthService) {}

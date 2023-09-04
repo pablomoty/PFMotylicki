@@ -3,11 +3,14 @@
     <button (click)="drawer?.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-
-    <span>Gestion de Alumnos</span>
+    <div class="toolbar">
+    <span>Gestion de Usuarios</span>
 
     <span class="example-spacer"></span>
 
-   
+    <p *ngIf="authUser$ | async; let authUser ">
+      {{ authUser?.nombre }} {{ authUser?.apellido }}
+    </p>
+  </div>
      
   </mat-toolbar>

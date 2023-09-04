@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { AlumnosComponent } from './pages/alumnos/alumnos.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { CursosComponent } from './pages/cursos/cursos.component';
 
 
@@ -14,8 +14,8 @@ import { CursosComponent } from './pages/cursos/cursos.component';
         component: HomeComponent,
       },
       {
-        path: 'alumnos',
-        component: AlumnosComponent
+        path: 'usuarios',
+        component: UsuariosComponent
       },
       {
         path: 'cursos',

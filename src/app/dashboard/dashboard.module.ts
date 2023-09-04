@@ -6,7 +6,7 @@ import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { SharedModule } from '../shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { MatToolbarModule } from '@angular/material/toolbar'; 
-import { AlumnosModule } from './pages/alumnos/alumnos.module';
+import { UsuariosModule } from './pages/usuarios/usuarios.module';
 import { HomeModule } from './pages/home/home.module';
 import { MatListModule } from '@angular/material/list'
 import { RouterModule } from '@angular/router';
@@ -29,7 +29,7 @@ import { CursosModule } from './pages/cursos/cursos.module';
     SharedModule,
     MatSidenavModule,
     MatToolbarModule,
-    AlumnosModule,
+    UsuariosModule,
     HomeModule,
     MatListModule,
     RouterModule,

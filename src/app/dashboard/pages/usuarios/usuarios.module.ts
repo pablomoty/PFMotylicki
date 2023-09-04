@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlumnosComponent } from './alumnos.component';
+import { UsuariosComponent } from './usuarios.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AlumnosComponent,
+    UsuariosComponent,
     FormularioComponent,
     TablaComponent
   ],
@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
 
     
   ],exports: [
-    AlumnosComponent
+    UsuariosComponent
   ]
 })
-export class AlumnosModule { }
+export class UsuariosModule { }

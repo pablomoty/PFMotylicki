@@ -1,15 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Alumno } from 'src/app/dashboard/pages/alumnos/models/modelalumno';
+import { Usuario } from 'src/app/dashboard/pages/usuarios/models/modelusuario';
 
 @Pipe({
   name: 'nombreCompleto'
 })
 export class NombreCompletoPipe implements PipeTransform {
 
-  transform(alumno: Alumno, ...args: unknown[]): unknown {
+  transform(usuario: Usuario, ...args: unknown[]): unknown {
 
     const isUppercase = args[0] === 'uppercase';
-    const fullName = `${alumno.nombre} ${alumno.apellido}`;
+    const fullName = `${usuario.nombre} ${usuario.apellido}`;
     return isUppercase ? fullName.toUpperCase() : fullName;
   }
 
