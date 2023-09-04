@@ -4,7 +4,7 @@ import { Usuario } from '../../pages/usuarios/models/modelusuario';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Store } from '@ngrx/store';
-import { selectAuthUser } from 'src/app/store/auth/auth.selector';
+import { selectAuthUsuario } from 'src/app/store/auth/auth.selector';
 
 @Component({
   selector: 'app-toolbar',
@@ -15,8 +15,8 @@ export class ToolbarComponent {
   @Input()
   public drawer?: MatDrawer;
 
-  public authUser$: Observable<Usuario | null>;
+  public authUsuario$: Observable<Usuario | null>;
 
   constructor(private authService: AuthService, private store: Store) {
-    this.authUser$ = this.store.select(selectAuthUser);
+    this.authUsuario$ = this.store.select(selectAuthUsuario);
  }}

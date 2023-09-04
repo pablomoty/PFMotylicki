@@ -12,13 +12,13 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UsuariosComponent implements OnDestroy {
 
-  public users: Observable<Usuario[]>;
+  public usuarios: Observable<Usuario[]>;
   public destroyed = new Subject<boolean>();
 
   public loading = false;
   constructor(private matDialog: MatDialog, private usuarioService: UsuariosService) {
-    this.usuarioService.loadUsers();
-    this.users = this.usuarioService.getUsers();
+    this.usuarioService.loadUsuarios();
+    this.usuarios = this.usuarioService.getUsuarios();
   }
 
   ngOnDestroy(): void {
@@ -30,7 +30,7 @@ export class UsuariosComponent implements OnDestroy {
       
         next: (v) => {
           if (v) {
-            this.usuarioService.createUser({
+            this.usuarioService.createUsuario({
               
               nombre: v.nombre,
               apellido: v.apellido,
@@ -45,21 +45,21 @@ export class UsuariosComponent implements OnDestroy {
       });
   }
 
-  borrarUsuario(userToDelete: Usuario): void {
+  borrarUsuario(usuarioToDelete: Usuario): void {
 
-    if (confirm(`¿Está seguro de eliminar a ${userToDelete.nombre}?`)) {
+    if (confirm(`¿Está seguro de eliminar a ${usuarioToDelete.nombre}?`)) {
 
-      this.usuarioService.deleteUserById(userToDelete.id);
+      this.usuarioService.deleteUsuarioById(usuarioToDelete.id);
     }
   }
 
-  editarUsuario(userToEdit: Usuario): void {
+  editarUsuario(usuarioToEdit: Usuario): void {
 
-    this.matDialog.open(FormularioComponent, { data: userToEdit }).afterClosed().subscribe({
-      next: (userUpdated) => {
+    this.matDialog.open(FormularioComponent, { data: usuarioToEdit }).afterClosed().subscribe({
+      next: (usuarioUpdated) => {
 
-        if (userUpdated) {
-          this.usuarioService.updateUserById(userToEdit.id, userUpdated);
+        if (usuarioUpdated) {
+          this.usuarioService.updateUsuarioById(usuarioToEdit.id, usuarioUpdated);
         }
       },
     });

@@ -8,8 +8,8 @@
 
     <span class="example-spacer"></span>
 
-    <p *ngIf="authUser$ | async; let authUser ">
-      {{ authUser?.nombre }} {{ authUser?.apellido }}
+    <p *ngIf="authUsuario$ | async; let authUsuario ">
+      {{ authUsuario?.nombre }} {{ authUsuario?.apellido }}
     </p>
   </div>
      

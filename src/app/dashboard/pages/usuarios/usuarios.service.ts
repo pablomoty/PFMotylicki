@@ -9,18 +9,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsuariosService {
 
-  private _users$ = new BehaviorSubject<Usuario[]>([]);
-  private users$ = this._users$.asObservable();
+  private _usuarios$ = new BehaviorSubject<Usuario[]>([]);
+  private usuarios$ = this._usuarios$.asObservable();
 
   constructor(private notifier: NotifierService, private httpClient: HttpClient) {}
 
-  loadUsers(): void {
+  loadUsuarios(): void {
    
     this.httpClient.get<Usuario[]>('http://localhost:3000/usuarios', {}).subscribe({
 
       next: (response) => {
 
-        this._users$.next(response);
+        this._usuarios$.next(response);
       },
       error: () => {
         this.notifier.showError('Error');
@@ -29,50 +29,50 @@ export class UsuariosService {
     })
   }
 
-  getUsers(): Observable<Usuario[]> {
-    return this.users$;
+  getUsuarios(): Observable<Usuario[]> {
+    return this.usuarios$;
   }
 
-  getUserById(id: number) {
-    return this.users$.pipe(
+  getUsuarioById(id: number) {
+    return this.usuarios$.pipe(
       take(1),
-      map(( users ) =>  users.find((u) => u.id === id)),
+      map(( usuarios ) =>  usuarios.find((u) => u.id === id)),
     )
   }
 
-  createUser(usuario: CrearUsuarioData): void {
+  createUsuario(usuario: CrearUsuarioData): void {
 
 
     this.httpClient.post<Usuario>('http://localhost:3000/usuarios', usuario)
       .pipe(
-        mergeMap((userCreate) => this.users$.pipe(
+        mergeMap((usuarioCreate) => this.usuarios$.pipe(
           take(1),
           map(
-            (arrayActual) => [...arrayActual, userCreate])
+            (arrayActual) => [...arrayActual, usuarioCreate])
           )
         )
       )
       .subscribe({
         next: (arrayActualizado) => {
-          this._users$.next(arrayActualizado);
+          this._usuarios$.next(arrayActualizado);
         }
       })
  
   }
 
-  updateUserById(id: number, usuarioActualizado: UpdateUsuarioData): void {
+  updateUsuarioById(id: number, usuarioActualizado: UpdateUsuarioData): void {
 
     this.httpClient.put('http://localhost:3000/usuarios/' + id, usuarioActualizado).subscribe({
 
-      next: () => this.loadUsers(),
+      next: () => this.loadUsuarios(),
     })
   }
 
 
-  deleteUserById(id: number): void {
+  deleteUsuarioById(id: number): void {
     this.httpClient.delete('http://localhost:3000/usuarios/' + id) .pipe().subscribe({
          
-          next: () => this.loadUsers(),
+          next: () => this.loadUsuarios(),
     })
 }
 

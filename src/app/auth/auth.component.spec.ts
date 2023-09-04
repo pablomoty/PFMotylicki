@@ -35,7 +35,7 @@ describe('AuthService', () => {
     httpController.verify();
   })
 
-  it('authUser$ envia valor cuando el login se hace correctamente', (done) => {
+  it('authUsuario$ envia valor cuando el login se hace correctamente', (done) => {
 
     const mockUsuario: Usuario = {
 
@@ -65,12 +65,12 @@ describe('AuthService', () => {
     }).flush(mockResponse)
 
 
-    service.authUser$.subscribe({
+    service.authUsuario$.subscribe({
 
-      next: (authUser) => {
+      next: (authUsuario) => {
 
-        expect(authUser).toBeTruthy();
-        expect(authUser).toEqual(mockUsuario);
+        expect(authUsuario).toBeTruthy();
+        expect(authUsuario).toEqual(mockUsuario);
         done();
 
       }

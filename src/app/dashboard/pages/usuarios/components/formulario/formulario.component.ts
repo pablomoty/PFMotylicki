@@ -9,7 +9,7 @@ import { Usuario } from '../../models/modelusuario';
   styleUrls: ['./formulario.component.scss']
 })
 export class FormularioComponent {
-  editingUser?: Usuario;
+  editingUsuario?: Usuario;
 
   nombreControl = new FormControl<string | null>(null, [Validators.required, Validators.minLength(2),]);
   apellidoControl = new FormControl<string | null>(null, [Validators.required,Validators.minLength(2),]);
@@ -35,7 +35,7 @@ export class FormularioComponent {
    
     if (this.data) {
       
-      this.editingUser = this.data;
+      this.editingUsuario = this.data;
       this.nombreControl.setValue(this.data.nombre);
       this.apellidoControl.setValue(this.data.apellido);
       this.emailControl.setValue(this.data.email);

@@ -3,6 +3,6 @@ import { AuthState, authFeatureKey } from "./auth.reducer";
 
 export const selectAuthState = createFeatureSelector<AuthState>(authFeatureKey);
 
-export const selectAuthUser = createSelector(selectAuthState, (state) => state.authUser);
+export const selectAuthUsuario = createSelector(selectAuthState, (state) => state.authUsuario);
 
-export const selectEsAdmin = createSelector(selectAuthState, (state) => state.authUser?.rol === 'ADMIN')
+export const selectEsAdmin = createSelector(selectAuthState, (state) => state.authUsuario?.rol === 'ADMIN')

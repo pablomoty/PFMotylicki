@@ -5,18 +5,18 @@ import { AuthActions } from "./auth.actions";
 export const authFeatureKey = 'auth';
 
 export interface AuthState {
-  authUser: Usuario | null;
+  authUsuario: Usuario | null;
 }
 
 const initialState: AuthState = {
-  authUser: null,
+  authUsuario: null,
 }
 
 export const authReducer = createReducer(initialState,
-  on(AuthActions.setAuthUser, (currentState, action) => {
+  on(AuthActions.setAuthUsuario, (currentState, action) => {
 
     return {
-      authUser: action.data
+      authUsuario: action.data
     }
   })
 )
