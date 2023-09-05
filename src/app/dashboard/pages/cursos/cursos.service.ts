@@ -18,8 +18,7 @@ export class CursosService {
   }
 
   loadCursos(): void {
-    // fetch ...
-    /// .then((data) => this.cursos$.next(data))
+
     this.cursos$.next([
       {
         id: 1,
@@ -65,7 +64,7 @@ export class CursosService {
       },
     });
   }
-
+  
   deleteById(id: number): void {
     this.cursos$.pipe(take(1)).subscribe({
       next: (arrayActual) => {
