@@ -10,8 +10,8 @@ import { selectEsAdmin } from 'src/app/store/auth/auth.selector';
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.scss']
 })
-export class CursosComponent {
-  // public dataSource: Curso[] = [];
+export class CursosComponent implements OnInit, OnDestroy {
+
   public data$: Observable<Curso[]>;
 
   public displayedColumns = ['id', 'name', 'precio', 'actions'];
@@ -19,21 +19,17 @@ export class CursosComponent {
   public isAdmin$: Observable<boolean>;
 
   constructor(private cursosService: CursosService, private store: Store) {
-    this.data$ = this.cursosService.getProducts();
+    this.data$ = this.cursosService.getCursos();
     this.isAdmin$ = this.store.select(selectEsAdmin);
   }
 
   ngOnDestroy(): void {
-    // throw new Error('Method not implemented.');
+   
   }
 
   ngOnInit(): void {
-    // CARGO LOS PRODUCTOS
-    this.cursosService.loadProducts();
-    // // LUEGO LOS OBTENGO
-    // this.productService.getProducts().subscribe({
-    //   next: (data) => console.log('data: ', data),
-    // });
+
+    this.cursosService.loadCursos();
   }
 
   onCreate(): void {

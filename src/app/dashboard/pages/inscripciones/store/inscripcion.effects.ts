@@ -17,19 +17,13 @@ export class InscripcionEffects {
   loadInscripcions$ = createEffect(() => {
     return this.actions$.pipe(
 
-      // SOLO FILTRO AQUELLAS ACCIONES QUE SEAN DE TIPO InscripcionActions.loadInscripcions
       ofType(InscripcionActions.loadInscripciones),
 
 
       concatMap(() =>
-        /** An EMPTY observable only emits completion. Replace with your own observable API request */
         this.getInscripcionsFromDB().pipe(
-
-          // SI TODO SALE BIEN....
           map(data => InscripcionActions.loadInscripcionesSuccess({ data })),
 
-
-          // SI TODO SALE MAL...
           catchError(error => of(InscripcionActions.loadInscripcionesFailure({ error }))))
       )
     );
@@ -38,40 +32,31 @@ export class InscripcionEffects {
   loadAlumnoOptions$ = createEffect(() => {
     return this.actions$.pipe(
 
-      // SOLO FILTRO AQUELLAS ACCIONES QUE SEAN DE TIPO InscripcionActions.loadInscripcions
       ofType(InscripcionActions.loadAlumnoOptions),
 
 
       concatMap(() =>
-        /** An EMPTY observable only emits completion. Replace with your own observable API request */
         this.getAlumnoOptions().pipe(
 
-          // SI TODO SALE BIEN....
           map(data => InscripcionActions.loadAlumnoOptionsSuccess({ data })),
 
-
-          // SI TODO SALE MAL...
           catchError(error => of(InscripcionActions.loadAlumnoOptionsFailure({ error }))))
       )
     );
   });
 
-  loadProductOptions$ = createEffect(() => {
+  loadCursoOptions$ = createEffect(() => {
     return this.actions$.pipe(
 
-      // SOLO FILTRO AQUELLAS ACCIONES QUE SEAN DE TIPO InscripcionActions.loadInscripcions
       ofType(InscripcionActions.loadCursoOptions),
 
 
       concatMap(() =>
-        /** An EMPTY observable only emits completion. Replace with your own observable API request */
-        this.getProductOptions().pipe(
+        this.getCursoOptions().pipe(
 
-          // SI TODO SALE BIEN....
+       
           map(data => InscripcionActions.loadCursoOptionsSuccess({ data })),
 
-
-          // SI TODO SALE MAL...
           catchError(error => of(InscripcionActions.loadCursoOptionsFailure({ error }))))
       )
     );
@@ -81,19 +66,15 @@ export class InscripcionEffects {
   createInscripcion$ = createEffect(() => {
     return this.actions$.pipe(
 
-      // SOLO FILTRO AQUELLAS ACCIONES QUE SEAN DE TIPO InscripcionActions.loadInscripcions
       ofType(InscripcionActions.createInscripcion),
 
 
       concatMap((action) =>
-        /** An EMPTY observable only emits completion. Replace with your own observable API request */
+
         this.createInscripcion(action.payload).pipe(
 
-          // SI TODO SALE BIEN....
           map(data => InscripcionActions.createInscripcionSuccess({ data })),
 
-
-          // SI TODO SALE MAL...
           catchError(error => of(InscripcionActions.createInscripcionFailure({ error }))))
       )
     );
@@ -101,7 +82,7 @@ export class InscripcionEffects {
 
   createInscripcionSuccess$ = createEffect(() => {
     return this.actions$.pipe(
-      // SOLO FILTRO AQUELLAS ACCIONES QUE SEAN DE TIPO InscripcionActions.loadInscripcions
+
       ofType(InscripcionActions.createInscripcionSuccess),
       map(() => this.store.dispatch(InscripcionActions.loadInscripciones()))
     );
@@ -111,18 +92,18 @@ export class InscripcionEffects {
   constructor(private actions$: Actions, private httpClient: HttpClient, private store: Store) {}
 
   private getInscripcionsFromDB(): Observable<InscripcionCursoMasAlumno[]> {
-    return this.httpClient.get<InscripcionCursoMasAlumno[]>(environment.baseApiUrl + '/inscripciones?_expand=curso&_expand=alumno')
+    return this.httpClient.get<InscripcionCursoMasAlumno[]>(environment.baseApiUrl + '/inscripcion?_expand=cursos&_expand=alumnos')
   }
 
   private getAlumnoOptions(): Observable<Alumno[]> {
     return this.httpClient.get<Alumno[]>(environment.baseApiUrl + '/alumnos')
   }
 
-  private getProductOptions(): Observable<Curso[]> {
+  private getCursoOptions(): Observable<Curso[]> {
     return this.httpClient.get<Curso[]>(environment.baseApiUrl + '/cursos');
   }
 
   private createInscripcion(payload: CreateInscripcionPayload): Observable<Inscripcion> {
-    return this.httpClient.post<Inscripcion>(environment.baseApiUrl + '/inscripciones', payload)
+    return this.httpClient.post<Inscripcion>(environment.baseApiUrl + '/inscripcion', payload)
   }
 }

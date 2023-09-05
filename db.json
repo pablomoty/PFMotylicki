@@ -18,5 +18,50 @@
       "genero": "Masculino",
       "id": "2"
     }
+  ],
+  "alumnos": [
+    {
+      "nombre": "Ignacio",
+      "apellido": "Rodriguez",
+      "email": "irodriguez@gmail.com",
+      "id": "1"
+    },
+    {
+      "nombre": "Valentina",
+      "apellido": "Garcia",
+      "email": "valeng@gmail.com",
+      "id": "2"
+    }
+  ],
+  "cursos": [
+    {
+      "id": "1",
+      "nombre": "Desarrollo Web",
+      "precio": "15000"
+    },
+    {
+      "id": "2",
+      "nombre": "JavaScript",
+      "precio": "25000"
+    },
+    {
+      "id": "3",
+      "nombre": "Angular",
+      "precio": "20000"
+    },
+    {
+      "id": "4",
+      "nombre": "React",
+      "precio": "20000"
+    },
+    {
+      "id": "5",
+      "nombre": "Java",
+      "precio": "35000"
+    }
+  ],
+  "inscripcion": [
+    {}
   ]
+  
 }

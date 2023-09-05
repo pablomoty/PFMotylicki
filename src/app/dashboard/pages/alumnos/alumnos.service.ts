@@ -17,10 +17,10 @@ export class AlumnosService {
   loadAlumnos(): void {
     this.httpClient.get<Alumno[]>(this.baseUrl).subscribe({
       next: (alumnos) => {
-        this._alumnos$.next(alumnos); // EMITIR LOS DATOS AL BEHAVIOR SUBJECT
+        this._alumnos$.next(alumnos); 
       },
       error: () => {
-        // MANEJAR ERROR AL CARGAR LOS COMPRADORES
+       
       },
     });
   }
@@ -28,11 +28,11 @@ export class AlumnosService {
   createAlumno(payload: CreateAlumnoPayload, afterCreate?: () => void): void {
     this.httpClient.post<Alumno>(this.baseUrl, payload).subscribe({
       next: () => {
-        this.loadAlumnos(); // RECARGAR EL LISTADO DESPUES DE CREAR UNO NUEVO
+        this.loadAlumnos(); 
         if (afterCreate) afterCreate();
       },
       error: () => {
-        // MANEJAR ERROR AL CARGAR LOS COMPRADORES
+        
       },
     });
   }
@@ -40,10 +40,10 @@ export class AlumnosService {
   deleteAlumnoById(id: number): void {
     this.httpClient.delete(this.baseUrl + '/' + id).subscribe({
       next: () => {
-        this.loadAlumnos(); // RECARGAR EL LISTADO DESPUES DE ELIMINAR UNO
+        this.loadAlumnos(); 
       },
       error: () => {
-        // MANEJAR ERROR AL CARGAR LOS COMPRADORES
+        
       },
     });
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { InscripcionActions } from '../../store/inscripcion.actions';
@@ -13,11 +13,11 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './formularioinscripciones.component.html',
   styleUrls: ['./formularioinscripciones.component.scss']
 })
-export class FormularioinscripcionesComponent {
+export class FormularioinscripcionesComponent implements OnInit{
   cursoIdControl = new FormControl(null, Validators.required);
   alumnoIdControl = new FormControl(null, Validators.required);
 
-  saleForm = new FormGroup({
+  inscripcionForm = new FormGroup({
     cursoId: this.cursoIdControl,
     alumnoId: this.alumnoIdControl,
   });
@@ -36,10 +36,10 @@ export class FormularioinscripcionesComponent {
   }
 
   onSubmit(): void {
-    if (this.saleForm.invalid) {
-      this.saleForm.markAllAsTouched();
+    if (this.inscripcionForm.invalid) {
+      this.inscripcionForm.markAllAsTouched();
     } else {
-      this.store.dispatch(InscripcionActions.createInscripcion({ payload: this.saleForm.getRawValue() }));
+      this.store.dispatch(InscripcionActions.createInscripcion({ payload: this.inscripcionForm.getRawValue() }));
       this.matDialogRef.close();
     }
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AlumnosService } from './alumnos.service';
 import { Observable } from 'rxjs';
 import { Alumno } from './models';
@@ -10,7 +10,7 @@ import { FormularioalumnosComponent } from './formularioalumnos/formularioalumno
   templateUrl: './alumnos.component.html',
   styleUrls: ['./alumnos.component.scss']
 })
-export class AlumnosComponent {
+export class AlumnosComponent implements OnInit, OnDestroy {
   alumnos$: Observable<Alumno[]>;
   displayedColumns = ['id', 'name', 'apellido', 'email', 'actions'];
 

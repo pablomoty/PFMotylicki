@@ -13,11 +13,11 @@ export class CursosService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Curso[]> {
+  getCursos(): Observable<Curso[]> {
     return this.cursos$.asObservable();
   }
 
-  loadProducts(): void {
+  loadCursos(): void {
     // fetch ...
     /// .then((data) => this.cursos$.next(data))
     this.cursos$.next([

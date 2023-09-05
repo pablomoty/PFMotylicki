@@ -12,7 +12,7 @@ import { FormularioinscripcionesComponent } from './formularioinscripciones/form
   templateUrl: './inscripciones.component.html',
   styleUrls: ['./inscripciones.component.scss']
 })
-export class InscripcionesComponent {
+export class InscripcionesComponent implements OnInit {
   displayedColumns = ['id', 'curso', 'alumno', 'total'];
   inscripciones$: Observable<InscripcionCursoMasAlumno[]>;
 

@@ -26,7 +26,7 @@ export const reducer = createReducer(
   initialState,
 
 
-  // load inscripciones
+
   on(InscripcionActions.loadInscripciones, state => {
     return {
       ...state,
@@ -53,7 +53,6 @@ export const reducer = createReducer(
   }),
 
 
-  // load alumno options
 
   on(InscripcionActions.loadAlumnoOptions, (state) => state),
   on(InscripcionActions.loadAlumnoOptionsSuccess, (state, action) => {
@@ -63,7 +62,7 @@ export const reducer = createReducer(
     }
   }),
 
-  // load curso options
+  
   on(InscripcionActions.loadCursoOptions, (state) => state),
   on(InscripcionActions.loadCursoOptionsSuccess, (state, action) => {
     return {

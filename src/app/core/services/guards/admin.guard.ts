@@ -6,17 +6,17 @@ import { map } from 'rxjs';
 
 export const adminGuard: CanActivateFn = (route, state) => {
 
-  const router = inject(Router)
+  const router = inject(Router);
 
   return inject(Store).select(selectEsAdmin).pipe(
 
-    map((isadmin) => {
-      if (!isadmin) return router.createUrlTree(['/dashboard/home'])
+    map((isAdmin) => {
 
-      return true
+      if (!isAdmin) {
+        return router.createUrlTree(['/dashboard/home'])
+      }
+
+      return true;
     })
-    
   )
-
-  
 };
