@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { InscripcionesComponent } from './inscripciones.component';
 import { FormularioinscripcionesComponent } from './formularioinscripciones/formularioinscripciones/formularioinscripciones.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { InscripcionesRoutingModule } from './inscripciones-routing.module';
+import { EffectsModule } from '@ngrx/effects';
 import { InscripcionEffects } from './store/inscripcion.effects';
 import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
 import { inscripcionFeature } from './store/inscripcion.reducer';
-import { InscripcionesRoutingModule } from './inscripciones-routing.module';
 
 
 
@@ -21,7 +21,8 @@ import { InscripcionesRoutingModule } from './inscripciones-routing.module';
     SharedModule,
     InscripcionesRoutingModule,
     StoreModule.forFeature(inscripcionFeature),
-    EffectsModule.forFeature([InscripcionEffects])
+    EffectsModule.forFeature([InscripcionEffects]),
+
     
     
   ]
