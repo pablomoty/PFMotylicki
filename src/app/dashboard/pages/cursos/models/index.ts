@@ -1,4 +1,5 @@
-export interface Cursos {
+export interface Curso {
   id: number;
-  name: string;
+  nombre: string;
+  precio: number;   
 }
